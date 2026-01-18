@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Item(models.Model):
+    name = models.CharField(max_length=50)
+    quantity = models.IntegerField(default=1)
+    is_purchased = models.BooleanField(default=False)
